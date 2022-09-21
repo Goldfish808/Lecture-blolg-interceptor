@@ -27,7 +27,6 @@
 		</div>
 	</div>
 	<hr />
-
 	<div>${detailDto.content}</div>
 </div>
 

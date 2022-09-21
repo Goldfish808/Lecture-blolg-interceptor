@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import site.metacoding.red.domain.users.Users;
 import site.metacoding.red.web.dto.response.CMRespDto;
 
-public class HelloIntercepter implements HandlerInterceptor {
+public class HelloInterceptor implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
@@ -29,7 +29,6 @@ public class HelloIntercepter implements HandlerInterceptor {
 //		if(s.contains("바보")){
 //		   
 //		}
-		
 		BufferedReader br = request.getReader();
 		StringBuilder st = new StringBuilder();
 		String s = "";
@@ -39,7 +38,7 @@ public class HelloIntercepter implements HandlerInterceptor {
 			st.append(s);
 		}
 
-		if (st.toString().contains("바보")) { // api 라는 문자가 포함되어있는지 체크
+		if (st.toString().contains("바보")) {
 			System.out.println("===========");
 			System.out.println("내용 : " + st);
 

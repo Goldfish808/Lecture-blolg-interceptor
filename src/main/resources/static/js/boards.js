@@ -34,8 +34,8 @@ function deleteById() {
 		dataType: "json" // 응답 데이터
 	}).done((res) => {
 		if (res.code == 1) {
-			//location.href = document.referrer;
-			location.href = "/?page=" + page + "&keyword=" + keyword;  //  /?page=?&keyword=?
+			location.href = document.referrer;
+			//location.href = "/?page=" + page + "&keyword=" + keyword;  //  /?page=?&keyword=?
 		} else {
 			alert("글삭제 실패");
 		}
